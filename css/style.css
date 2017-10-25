@@ -1,0 +1,114 @@
+body {
+  background: #4C797F;
+  text-align: center;
+}
+
+.search {
+  position: absolute;
+  left: 50%;
+  top: 30%;
+  transform: translate(-50%, -50%);
+  width: 500px;
+}
+.search input {
+  cursor: pointer;
+  margin: 0 auto;
+  color: #BCE4D2;
+  width: 60px;
+  height: 60px;
+  border: none;
+  font-size: 50px;
+  padding: 10px;
+  position: absolute;
+  top: 0px;
+  left: 50%;
+  border-radius: 100%;
+  box-shadow: 0 0 0 5px #BCE4D2;
+  background: transparent;
+  transition: width .25s ease-in-out, border-radius .5s ease-in-out, left .25s ease;
+  transition-delay: .5s, .75s, .5s;
+}
+.search input:focus, .search input:valid {
+  border-radius: 1%;
+  outline: none;
+  position: absolute;
+  transition-delay: 1s, .3s, 1s;
+  width: 100%;
+  left: 15%;
+}
+.search input:focus + button.exit, .search input:valid + button.exit {
+  pointer-events: all;
+  transition-delay: 0s;
+  position: absolute;
+  padding: 0;
+  border: 0;
+  top: 50%;
+  left: 99%;
+  background: #BCE4D2;
+  border-radius: 10%;
+  color: #BCE4D2;
+  outline: none;
+  height: 5px;
+  width: 50px;
+  transform: rotate(45deg) translate(35px, 15px);
+  transition: transform .25s ease-in-out, left .25s ease-in-out;
+  transition-delay: .25s, 1s;
+  cursor: pointer;
+}
+.search input:focus + button.exit:focus, .search input:valid + button.exit:focus {
+  outline: none;
+}
+.search input:focus + button.exit:after, .search input:valid + button.exit:after {
+  content: '';
+  position: absolute;
+  padding: 0;
+  border: 0;
+  background: #BCE4D2;
+  border-radius: 10%;
+  color: #BCE4D2;
+  outline: none;
+  height: 5px;
+  width: 50px;
+  transform: rotate(90deg);
+  transition: transform .25s ease-in-out;
+  transition-delay: .5s;
+  cursor: pointer;
+}
+.search .exit {
+  position: absolute;
+  padding: 0;
+  border: 0;
+  top: 50%;
+  left: 50%;
+  background: #BCE4D2;
+  border-radius: 10%;
+  color: #BCE4D2;
+  outline: none;
+  height: 5px;
+  width: 50px;
+  transform: rotate(45deg) translate(110px, 25px);
+  transition: transform .25s ease-in-out, left .25s ease-in-out;
+  transition-delay: 1s, .5s;
+  cursor: pointer;
+}
+.search .exit:focus {
+  outline: none;
+}
+.search .exit:after {
+  content: '';
+  position: absolute;
+  padding: 0;
+  border: 0;
+  top: 0%;
+  left: 0%;
+  background: #BCE4D2;
+  border-radius: 10%;
+  color: #BCE4D2;
+  outline: none;
+  height: 5px;
+  width: 50px;
+  transform: rotate(180deg);
+  transition: transform .25s ease-in-out;
+  transition-delay: .75s;
+  cursor: pointer;
+}
